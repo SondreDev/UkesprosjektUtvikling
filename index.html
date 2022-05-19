@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Unreal Karakter Bevegelse</title>
+    <script>
+        window.onload = oppstart;
+
+        function oppstart() {
+            //Åpner første siden (Fra W3Schools)
+            document.getElementById("defaultOpen").click();
+        }
+
+        function openTab(tabName, elmnt, color) {
+            //Skjuler elementer med klassen HeaderTab (Fra W3Schools)
+            var i, sider, knapp;
+            sider = document.getElementsByClassName("HeaderTab");
+            for (i = 0; i < sider.length; i++) {
+                sider[i].style.display = "none";
+            }
+
+            //Fjerner fargen på knapper (Fra W3Schools)
+            knapp = document.getElementsByClassName("TabButt");
+            for (i = 0; i < knapp.length; i++) {
+                knapp[i].style.backgroundColor = "";
+            }
+
+            //Viser Riktig Side (Fra W3Schools)
+            document.getElementById(tabName).style.display = "block";
+
+            //Legg til riktig farge på knapp (Fra W3Schools)
+            elmnt.style.backgroundColor = color;
+        }
+    </script>
+</head>
+<body>
+    <!-- Div tags for å definere sidene (Fra W3Schools) -->
+    <div id="Hjem" class="HeaderTab">
+        <h1>Hjem</h1>
+    </div>
+    <div id="MusIn" class="HeaderTab">
+        <h1>Mus Input</h1>
+    </div>
+    <div id="TastIn1" class="HeaderTab">
+        <h1>Tastatur Input 1</h1>
+    </div>
+    <div id="TastIn2" class="HeaderTab">
+        <h1>Tastatur Input 2</h1>
+    </div>
+    <div id="Justeringer" class="HeaderTab">
+        <h1>Tastatur Input 2</h1>
+    </div>
+    <div id="Ferdig" class="HeaderTab">
+        <h1>Ferdig</h1>
+    </div>
+
+    <!-- Knapper for å åpne de forskjellige sidene (Fra W3Schools) -->
+    <button class="TabButt" onclick="openTab('Hjem', this, '#41b3a3')" id="defaultOpen">Hjem</button>
+    <button class="TabButt" onclick="openTab('MusIn', this, '#e8a87c')">Mus Input</button>
+    <button class="TabButt" onclick="openTab('TastIn1', this, '#85DCB8')">Tastatur Input 1</button>
+    <button class="TabButt" onclick="openTab('TastIn2', this, '#85DCB8')">Tastatur Input 2</button>
+    <button class="TabButt" onclick="openTab('Justeringer', this, '#C38D9E')">Justeringer</button>
+    <button class="TabButt" onclick="openTab('Ferdig', this, '#41b3a3')">Ferdig</button>    
+</body>
+</html>

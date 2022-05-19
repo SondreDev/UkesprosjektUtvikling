@@ -1,0 +1,29 @@
+.TabButt {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 16.666666666%;
+}
+
+.TabButt:hover {
+    background-color: #777;
+}
+
+.HeaderTab {
+    color: white;
+    display: none;
+    padding: 50px;
+    text-align: center;
+}
+
+#Hjem {background-color: #41b3a3;}
+#MusIn {background-color: #e8a87c;}
+#TastIn1 {background-color: #85DCB8;}
+#TastIn2 {background-color: #85DCB8;}
+#Justeringer {background-color: #C38D9E;}
+#Ferdig {background-color: #41b3a3;}
